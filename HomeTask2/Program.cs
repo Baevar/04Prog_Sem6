@@ -2,7 +2,7 @@
 // в обоих регистрах. Сформируйте строку, в которой все
 // заглавные буквы заменены на строчные. 
 
-string str = "aS1fl13rAf1dsgsdgFGGvb";
+string str = "aS1fl13rAf1!!!;;  dsgsdgFGGvb";
 
 Console.WriteLine(str);
 
