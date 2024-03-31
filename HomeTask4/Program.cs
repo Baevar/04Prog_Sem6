@@ -9,14 +9,18 @@
 string ReverseWordInStrin(string str)
 {
     string[] arrayWord = str.Split(' ');
-    string akk = " ";
-    for (int i = 0; i < arrayWord.Length / 2; i++)
+    string result = string.Empty;
+    for (int i = arrayWord.Length - 1; i >= 0; i--)
     {
-        akk = arrayWord[i];
-        arrayWord[i] = arrayWord[arrayWord.Length - i - 1];
-        arrayWord[arrayWord.Length - i - 1] = akk;
+        if (i != 0)
+        {
+            result += arrayWord[i] + " ";
+        }
+        else
+        {
+            result += arrayWord[i];
+        }
     }
-    string result = string.Join(" ", arrayWord);
     return result;
 }
 
@@ -25,15 +29,5 @@ Console.WriteLine("Введите строку");
 string str = Console.ReadLine();
 
 string revesreWord = ReverseWordInStrin(str);
+
 Console.WriteLine(revesreWord);
-
-// string hello = "Hello my world";
-// string res = string.Empty;
-// string[] helloSplit = hello.Split();//["Hello", "my", "world"]
-
-// for (int i = helloSplit.Length - 1; i >= 0; i--)
-// {
-//     res += helloSplit[i] + " ";
-// }
-
-// Console.WriteLine(res.TrimEnd());
